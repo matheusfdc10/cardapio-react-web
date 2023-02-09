@@ -12,8 +12,9 @@ const Header = ({ name }) => {
   return (
     <StyledHeader>
       <div className="logo">
-        <img src={logo} alt="logo" onClick={() => navigate('/menu')} />
+        {/* <img src={logo} alt="logo" onClick={() => navigate('/menu')} /> */}
         {/* <h1>{name}</h1> */}
+        <h1 onClick={() => navigate('/menu')}>Restaurante</h1>
       </div>
       {!authenticated ? (
         <Button onClick={() => navigate("/login")}>Entrar</Button>

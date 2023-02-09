@@ -29,7 +29,8 @@ export const StyledCarousel = Styled.div`
     }
 
     .active {
-        color: #0249aa;
+        /* color: #0249aa; */
+        color: red;
     }
     
 `

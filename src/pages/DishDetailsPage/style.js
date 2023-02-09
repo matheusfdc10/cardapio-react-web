@@ -5,21 +5,28 @@ export const StyledDishDetails = Styled.div`
 
     .image {
         /* width: 110px; */
-        height: 280px;
+        max-height: 280px;
+        min-height: 210px;
         overflow: hidden;
         
         display: flex;
         flex-direction: column;
         align-items: center;
         position: relative;
+        background-color: black;
+
+        @media (min-width: 600px) {
+            height: 280px;
+        }
 
         > img {
+            min-height: 210px;
             height: 100%;
             /* border-radius: 8px; */
             /* width: 110px; */
-            @media (min-width: 500px) {
+            /* @media (min-width: 500px) {
                     width: 100%;
-                }
+                } */
         }
 
         > button {
@@ -34,7 +41,8 @@ export const StyledDishDetails = Styled.div`
             box-shadow: 0 0 10px #0003;
 
             :hover {
-                color: #0249aa;
+                /* color: #0249aa; */
+                color: red;
                 box-shadow: 0 0 5px #0004;
             }
 

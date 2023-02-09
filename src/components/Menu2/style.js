@@ -21,9 +21,9 @@ export const StyledMenu = Styled.div`
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                /* background-color: red; */
+                background-color: red;
                 /* background-color: #382660; */
-                background-color: #0249aa;
+                /* background-color: #0249aa;: */
                 height: 48px;
                 width: 30px;
 
