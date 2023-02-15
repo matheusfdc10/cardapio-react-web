@@ -81,6 +81,7 @@ export const StyledDishDetails = Styled.div`
             /* text-align: justify; */
             word-break: break-word;
             margin-top: 8px;
+            white-space: pre-line;
         }
 
         > span {
