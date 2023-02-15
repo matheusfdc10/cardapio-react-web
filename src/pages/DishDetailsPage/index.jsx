@@ -8,6 +8,7 @@ import { formatCurrency } from "../../utils/formtCurrency";
 import { StyledDishDetails } from "./style";
 import { IoIosArrowBack } from 'react-icons/io';
 import Whatsapp from "../../components/Whatsapp";
+import { formatarParagrafo } from "../../utils/formatParagraph";
 
 const DishDetailsPage = () => {
     const navigate = useNavigate()
@@ -44,7 +45,7 @@ const DishDetailsPage = () => {
                     }
                     <div className={`box ${!dish.image ? "img-none" : null}`}>
                         <h1>{dish.name}</h1>
-                        <p>{dish.description}</p>
+                        <p>{formatarParagrafo(dish.description)}</p>
                         <span>{formatCurrency(dish.price)}</span>
                     </div>
                 </StyledDishDetails>
