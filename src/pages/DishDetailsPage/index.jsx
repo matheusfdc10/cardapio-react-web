@@ -34,11 +34,15 @@ const DishDetailsPage = () => {
         <Header />
             <Container maxwidth={'600px'} flexdirection='column'>
                 <StyledDishDetails>
-                    <div className="image">
-                        <button onClick={() => navigate(-1)}><IoIosArrowBack/></button>
-                        <img src={dish.image} />
-                    </div>
-                    <div className="box">
+                    {   dish.image ?
+                        <div className="image">
+                            <button className="btn-back" onClick={() => navigate(-1)}><IoIosArrowBack/></button>
+                            <img src={dish.image} />
+                        </div>
+                        :
+                        <button className="btn-back margin-top-0" onClick={() => navigate(-1)}><IoIosArrowBack/></button>
+                    }
+                    <div className={`box ${!dish.image ? "img-none" : null}`}>
                         <h1>{dish.name}</h1>
                         <p>{dish.description}</p>
                         <span>{formatCurrency(dish.price)}</span>

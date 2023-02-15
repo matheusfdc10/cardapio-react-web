@@ -26,9 +26,12 @@ function Menu2({ menu }) {
                   <hr />
                   <span>{formatCurrency(item.price)}</span>
                 </div>
-                <div className="image">
-                  <img src={item.image} />
-                </div>
+                {
+                  !item.image ||
+                  <div className="image">
+                    <img src={item.image} />
+                  </div>
+                }
               </div>
             ))}
           </div>

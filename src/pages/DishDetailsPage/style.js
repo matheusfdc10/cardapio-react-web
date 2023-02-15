@@ -8,7 +8,7 @@ export const StyledDishDetails = Styled.div`
         max-height: 280px;
         min-height: 210px;
         overflow: hidden;
-        
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -28,31 +28,39 @@ export const StyledDishDetails = Styled.div`
                     width: 100%;
                 } */
         }
+    }
 
-        > button {
-            left:0 ;
-            position: absolute;
-            margin-top: 24px;
-            margin-left: 24px;
-            background-color: white;
-            border: none;
-            border-radius: 50%;
-            padding: 4px;
-            box-shadow: 0 0 10px #0003;
+    .margin-top-0 {
+        margin-top: 0px !important;
+    }
 
-            :hover {
-                /* color: #0249aa; */
-                color: red;
-                box-shadow: 0 0 5px #0004;
-            }
+    .btn-back {
+        left:0 ;
+        position: absolute;
+        margin-top: 24px;
+        margin-left: 24px;
+        background-color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 4px;
+        box-shadow: 0 0 10px #0003;
 
-            > svg {
-                height: 40px;
-                width: 40px;
-                margin-top: 2px;
-                margin-right: 2px;
-            }
+        :hover {
+            /* color: #0249aa; */
+            color: red;
+            box-shadow: 0 0 5px #0004;
         }
+
+        > svg {
+            height: 40px;
+            width: 40px;
+            margin-top: 2px;
+            margin-right: 2px;
+        }
+    }
+
+    .img-none {
+        padding-top: 60px !important;
     }
 
     .box {
