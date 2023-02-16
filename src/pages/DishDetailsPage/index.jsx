@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Container from "../../components/Container";
-import Header from "../../components/Header";
 import Loading from "../../components/Loading";
 import { getDish } from "../../services/api";
 import { formatCurrency } from "../../utils/formtCurrency";
 import { StyledDishDetails } from "./style";
 import { IoIosArrowBack } from 'react-icons/io';
-import Whatsapp from "../../components/Whatsapp";
 
 const DishDetailsPage = () => {
     const navigate = useNavigate()
@@ -31,12 +29,16 @@ const DishDetailsPage = () => {
     
     return (
         <>
-        <Header />
             <Container maxwidth={'600px'} flexdirection='column'>
                 <StyledDishDetails>
                     {   dish.image ?
                         <div className="image">
-                            <button className="btn-back" onClick={() => navigate(-1)}><IoIosArrowBack/></button>
+                            <button 
+                                className="btn-back"
+                                onClick={() => navigate(-1)}
+                            >
+                                <IoIosArrowBack/>
+                            </button>
                             <img src={dish.image} />
                         </div>
                         :
@@ -49,7 +51,6 @@ const DishDetailsPage = () => {
                     </div>
                 </StyledDishDetails>
             </Container>
-            <Whatsapp />
         </>
     );
 }

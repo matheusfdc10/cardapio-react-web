@@ -48,9 +48,15 @@ const UpdateDishPage = () => {
   }
 
   const newImage = async (file) => {
-    const base64 = await convertToBase64(file)
-    setViewImage(base64)
-    setImage(file)
+    try{
+      const base64 = await convertToBase64(file)
+      setViewImage(base64)
+      setImage(file)
+    } catch(err) {
+        console.log(err)
+        setImage("")
+        setViewImage(null)
+    }
   }
 
   if(loading){
@@ -87,7 +93,7 @@ const UpdateDishPage = () => {
         </div>
         <div className="field">
           <label>Foto</label>
-          <img src={viewImage} width="200x" alt="image" />
+          {!viewImage || <img src={viewImage} width="200x" alt="image" />}
           <input 
             type="file"
             accept="image/png,image/jpeg"

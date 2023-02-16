@@ -10,10 +10,12 @@ import { AuthContext, AuthProvider } from "./contexts/auth";
 import DishDetailsPage from "./pages/DishDetailsPage";
 import HomePage from "./pages/HomePage";
 import IndexPage from "./pages/IndexPage";
+import IndexPupblicPage from "./pages/IndexPupblicPage";
 import LoginPage from "./pages/LoginPage";
 import MenuPage from "./pages/MenuPage";
 import NewDishPage from "./pages/NewDishPage";
 import NewTypeDishPage from "./pages/NewTypeDishPage";
+import UpdateDataRestaurante from "./pages/UpdateDataRestaurant";
 import UpdateDishPage from "./pages/UpdateDishPage";
 import UpdateTypeDishPage from "./pages/UpdateTypeDishPage";
 import UpdateTypesDishesPage from "./pages/UpdateTypesDishesPage";
@@ -36,8 +38,10 @@ export default function AppRoutes() {
       <Router>
         <AuthProvider>
           <Routes>
-            <Route path="/menu" element={<MenuPage />} />
-            <Route path="/menu/details/:id" element={<DishDetailsPage />} />
+            <Route path="/menu" element={<IndexPupblicPage />} >
+              <Route path="/menu" element={<MenuPage />} />
+              <Route path="/menu/details/:id" element={<DishDetailsPage />} />
+            </Route>
             <Route path="/login" element={<LoginPage />} />
             <Route
               path="/"
@@ -48,6 +52,7 @@ export default function AppRoutes() {
               }
             >
               <Route path="/home" element={<HomePage />} />
+              <Route path="/UpdateDataRestaurnate" element={<UpdateDataRestaurante />} />
               <Route path="/NewTypeDish" element={<NewTypeDishPage />} />
               <Route path="/UpdateTypeDish/:name/:id" element={<UpdateTypeDishPage />} />
               <Route path="/NewDish/:typedish" element={<NewDishPage />} />

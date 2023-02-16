@@ -3,7 +3,7 @@ import axios from 'axios'
 export const api = axios.create({
     baseURL: 'https://api-cardapio-dani.onrender.com',
     // baseURL: 'http://localhost:5000',
-    // baseURL: 'http://192.168.0.8:5000',
+    // baseURL: 'http://192.168.0.2:5000',
 })
 
 export const createSession = async (email, password) => {
@@ -82,6 +82,26 @@ export const updateDish = async (name, price, description, status, file = null, 
     dados.append("file", file)
 
     return api.put(`/updateDish/${id}/${typeDishesId}`,  dados, {
+        headers: {
+            "Content-type": `multipar/form-data`,
+        }
+    })
+}
+
+export const updateDataRestaurante = async (name, email, telephone, whatsapp, colorHeader, colorDetails, file = null) => {
+    authToken()
+
+    const dados = new FormData()
+    
+    dados.append("name", name)
+    dados.append("email", email)
+    dados.append("telephone", telephone)
+    dados.append("whatsapp", whatsapp)
+    dados.append("colorHeader", colorHeader)
+    dados.append("colorDetails", colorDetails)
+    dados.append("file", file)
+
+    return api.put(`/updateRestaurant`,  dados, {
         headers: {
             "Content-type": `multipar/form-data`,
         }

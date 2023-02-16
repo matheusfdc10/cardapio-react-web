@@ -9,10 +9,9 @@ import { StyledBox, StyledHomePage } from "./style";
 
 const IndexPage = () => {
     const { restaurant } = useContext(AuthContext);
-
     return (
         <>
-            <Header name={restaurant.name} />
+            <Header name={restaurant.name} logo={restaurant.logo} colorHeader={restaurant.colorHeader} />
             <Container>
                 <div style={{ display: 'flex' }}>
                     <SideBar />

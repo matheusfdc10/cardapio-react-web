@@ -1,9 +1,9 @@
 import { StyledWhatsapp } from "./style";
 import { BsWhatsapp } from 'react-icons/bs';
-const number = 21999999999
-const Whatsapp = () => {
+
+const Whatsapp = ({whatsapp}) => {
     return(
-        <StyledWhatsapp href={`https://wa.me/55${number}`}>
+        <StyledWhatsapp href={`https://wa.me/55${whatsapp}`}>
             <BsWhatsapp />
         </StyledWhatsapp>
     )

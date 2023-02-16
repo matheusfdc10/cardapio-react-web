@@ -2,7 +2,7 @@ import { StyledCarousel } from "./style";
 import { motion } from 'framer-motion'
 import { useEffect, useRef, useState } from "react";
 
-const Carousel = ({ items, setTitleMenu}) => {
+const Carousel = ({ items, setTitleMenu, colorDetails}) => {
     const carousel = useRef();
     const [width, setWidth] = useState(0)
     const [isActive, setIsActive] = useState(null)
@@ -27,13 +27,24 @@ const Carousel = ({ items, setTitleMenu}) => {
                     animate={{ x: 0 }}
                     transition={{ duration: 1 }}
                     >
-                    {!items.length? null : <motion.div className={`item ${isActive === null? "active" : null}`} key={0} onClick={() => handleSetTitleMenu([], null)}>
+                    {!items.length?
+                        null 
+                    : 
+                    <motion.div 
+                        className={`item`}
+                        style={isActive === null ? {color: colorDetails} : null}
+                        key={0} 
+                        onClick={() => handleSetTitleMenu([], null)}>
                         <span>Todos</span>
                     </motion.div>}
                     {items?.filter(item => {
                         return item?.dishes.length === 0? null : item
                     }).map((item, i) => (
-                        <motion.div className={`item ${isActive === i? "active" : null}`} key={i} onClick={() => handleSetTitleMenu(item, i)}>
+                        <motion.div 
+                            className={`item`}
+                            style={isActive === i ? {color: colorDetails} : null}
+                            key={i} 
+                            onClick={() => handleSetTitleMenu(item, i)}>
                             <span>{item.name}</span>
                         </motion.div>
                     ))}
