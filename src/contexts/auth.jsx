@@ -1,11 +1,12 @@
 import { createContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { createSession, getRestaurant, getUser } from "../services/api";
 // import { getUser } from "../server/api";
 
 export const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
+  const location = useLocation();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
@@ -43,7 +44,9 @@ export function AuthProvider({ children }) {
     try {
       const { data } = await getRestaurant()
       setRestaurant(data);
-      navigate("/home");
+      if(location.pathname.includes("login")){
+        navigate("/home");
+      }
       setLoading(false)
     } catch (err) {
       logout()
@@ -55,7 +58,9 @@ export function AuthProvider({ children }) {
     try {
       localStorage.removeItem("token");
       setUser(null);
-      navigate("/menu");
+      if(!location.pathname.includes("menu")){
+        navigate("/menu");
+      }
       setLoading(false)
     } catch (err) {
       console.log(err);
