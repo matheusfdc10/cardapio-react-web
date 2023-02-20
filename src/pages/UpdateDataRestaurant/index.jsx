@@ -16,7 +16,7 @@ const UpdateDataRestaurante = () => {
     const [whatsapp, setWhatsapp] = useState(restaurant.whatsapp)
     const [colorHeader, setColorHeader] = useState(restaurant.colorHeader)
     const [colorDetails, setColorDetails] = useState(restaurant.colorDetails)
-    const [image, setImage] = useState('')
+    const [image, setImage] = useState(restaurant?.logo?.includes("base64"))
     const [viewImage, setViewImage] = useState(restaurant.logo)
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
@@ -109,7 +109,12 @@ const UpdateDataRestaurante = () => {
                         accept="image/png,image/jpeg"
                         onChange={e => newImage(e.target.files[0])}
                     />
-                    {!viewImage || <Button onClick={() => setViewImage(null)} style={{height: "25px"}}>Excluir Logo</Button>}
+                    {!viewImage || 
+                        <Button onClick={() => {
+                            setViewImage(null)
+                            setImage(null)
+                        }} 
+                        style={{height: "25px"}}>Excluir Logo</Button>}
                 </div>
                 <div className="actions">
                     <Button onClick={() => HandleUpdateDataRestaurante()}>Atualizar</Button>
