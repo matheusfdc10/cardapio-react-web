@@ -14,14 +14,23 @@ export const StyledWhatsapp = Styled.a`
     margin-right: 10px;
     box-shadow: 0 0 10px #0003;
     cursor: pointer;
-    color: black;
+    color: white;
+    transition: .6s;
+
 
     :hover {
-        box-shadow: 0 0 5px #0004;
-        color: white;
+        box-shadow: 0 0 8px #0009;
+        transition: .6s;
+
+        > svg {
+            width: 40px;
+            height: 40px;
+            transition: .6s;
+        }
     }
 
     > svg {
+        transition: .6s;
         width: 35px;
         height: 35px;
     }

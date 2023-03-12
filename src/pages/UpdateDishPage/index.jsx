@@ -117,7 +117,7 @@ const UpdateDishPage = () => {
               }}
               style={{ height: "25px" }}
             >
-              Excluir Logo
+              Excluir
             </Button>
           )}
         </div>

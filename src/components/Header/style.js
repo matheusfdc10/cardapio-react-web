@@ -11,6 +11,7 @@ export const StyledHeader = Styled.header`
     padding: 20px 20px 16px 20px;
     /* box-shadow: 0 0 15px #0004; */
     box-shadow: 0 0 15px #000f;
+    z-index: 100;
 
     .logo {
         display: flex;

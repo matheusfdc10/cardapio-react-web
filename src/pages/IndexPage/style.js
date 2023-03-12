@@ -9,17 +9,21 @@ export const IndexStyled = Styled.div`
     .body {
         flex: 1;
         display: flex;
-        padding: 36px 30px 30px 30px;
         overflow: hidden;
-        gap: 32px;
-
+        gap: 16px;
+        
         .container {
             flex: 1;
             overflow-y: auto;
-            overflow-x: auto;
-            padding: 16px;
-            border-radius: 16px;
-            box-shadow: rgb(0 0 0 / 20%) 0px 0px 12px;
+
+            .box {
+                min-height: calc(100% - 66px);
+                margin: 36px 30px 30px 10px;
+                padding: 16px;
+                border-radius: 16px;
+                box-shadow: rgb(0 0 0 / 20%) 0px 0px 12px;
+                overflow-x: auto;
+            }
         }
     }
 

@@ -17,7 +17,9 @@ const IndexPage = () => {
                 <SideBar />
 
                 <div className="container">
-                    <Outlet />
+                    <div className="box">
+                        <Outlet />
+                    </div>
                 </div>
             </div>
         </IndexStyled>

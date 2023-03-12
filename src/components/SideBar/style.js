@@ -4,6 +4,7 @@ export const StyledSideBar = Styled.div`
     /* width: 20%; */
     overflow-y: auto;
     overflow-x: hidden;
+    margin: 36px 10px 30px 36px;
     padding: 12px 16px;
     border-radius: 16px;
     box-shadow: rgb(0 0 0 / 20%) 0px 0px 12px;
