@@ -29,25 +29,25 @@ const SideBar = () => {
                 </div>
             </div>
             <div className='sidebar-container-btns'>
-                <div className='btn' onClick={() => navigate('/home')}>
+                <div title='Início' className='btn' onClick={() => navigate('/home')}>
                     <div className='icon'>
                         <ImHome />
                     </div>
                     <span style={{ display: openClose ? 'none' : 'block' }}>Início</span>
                 </div>
-                <div className='btn' onClick={() => navigate('/menu')}>
+                <div title='Cardápio' className='btn' onClick={() => navigate('/menu')}>
                     <div className='icon'>
                         <MdRestaurantMenu />
                     </div>
                     <span style={{ display: openClose ? 'none' : 'block' }}>Cardápio</span>
                 </div>
-                <div className='btn' onClick={() => navigate('/UpdateDataRestaurnate')}>
+                <div title='Atualizar dados' className='btn' onClick={() => navigate('/UpdateDataRestaurnate')}>
                     <div className='icon'>
                         <IoMdSettings />
                     </div>
                     <span style={{ display: openClose ? 'none' : 'block' }}>Atualizar dados</span>
                 </div>
-                <div className='btn' onClick={() => logout()}>
+                <div title="Sair" className='btn' onClick={() => logout()}>
                     <div className='icon'>
                         <MdExitToApp />
                     </div>
