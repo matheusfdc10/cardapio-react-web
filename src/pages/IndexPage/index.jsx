@@ -4,25 +4,38 @@ import Container from "../../components/Container";
 import Header from "../../components/Header";
 import SideBar from "../../components/SideBar";
 import { AuthContext } from "../../contexts/auth";
-import { StyledBox, StyledHomePage } from "./style";
+import { IndexStyled, StyledBox, StyledHomePage } from "./style";
 
 
 const IndexPage = () => {
     const { restaurant } = useContext(AuthContext);
     return (
-        <>
+        <IndexStyled>
             <Header name={restaurant.name} logo={restaurant.logo} colorHeader={restaurant.colorHeader} />
-            <Container>
-                <div style={{ display: 'flex' }}>
-                    <SideBar />
-                    <StyledBox>
-                        <div>
-                            <Outlet />
-                        </div>
-                    </StyledBox>
+
+            <div className="body">
+                <SideBar />
+
+                <div className="container">
+                    <Outlet />
                 </div>
-            </Container>
-        </>
+            </div>
+        </IndexStyled>
+
+        
+        // <>
+        //     <Header name={restaurant.name} logo={restaurant.logo} colorHeader={restaurant.colorHeader} />
+        //     <Container>
+        //         <div style={{ display: 'flex' }}>
+        //             <SideBar />
+        //             <StyledBox>
+        //                 <div>
+        //                     <Outlet />
+        //                 </div>
+        //             </StyledBox>
+        //         </div>
+        //     </Container>
+        // </>
     )
 }
 

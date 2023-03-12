@@ -1,8 +1,14 @@
 import Styled from "styled-components";
 
 export const StyledHome = Styled.div`
-    > h1 {
+    > div {
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+
+        > h1 {
             margin-bottom: 10px;
+        }
     }
     
     table {

@@ -67,7 +67,7 @@ const UpdateDishPage = () => {
   };
 
   if (loading) {
-    return <Loading height="200px" />;
+    return <Loading />;
   }
 
   return (

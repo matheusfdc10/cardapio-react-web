@@ -6,6 +6,8 @@ import { AuthContext } from "../../contexts/auth";
 import { deletTypeDish } from "../../services/api";
 import { StyledHome } from "./style";
 
+import { GrAddCircle } from "react-icons/gr"
+
 const HomePage = () => {
     const navigate = useNavigate()
     const [loading, setLoading] = useState(true)
@@ -36,12 +38,21 @@ const HomePage = () => {
     }
 
     if(loading){
-      return  <Loading height='200px' />
+      return  <Loading />
     }
 
   return (
     <StyledHome>
-      <h1>Início</h1>
+      <div>
+        <h1>Início</h1>
+        <Button 
+          onClick={() => navigate('/NewTypeDish')} 
+          fontSize='18px' height='32px'
+          > 
+            <GrAddCircle />
+            Adicionar tipo
+        </Button>
+      </div>
       {/* <hr/> */}
       <table>
         <thead>

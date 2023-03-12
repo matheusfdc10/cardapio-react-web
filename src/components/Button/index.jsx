@@ -1,7 +1,7 @@
 import { StyledButton } from "./style";
 
-const Button = ({children, ...restProps}) => {
-    return <StyledButton  {...restProps}>
+const Button = ({children, fontSize, height, ...restProps}) => {
+    return <StyledButton style={{fontSize, height}}  {...restProps}>
         {children}
     </StyledButton>
 }

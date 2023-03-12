@@ -30,6 +30,10 @@ export const StyledHeader = Styled.header`
         }
     }
 
+    .actions {
+        display: flex;
+    }
+
     > button, div button {
         padding: 8px;
         font-size: 16px;
