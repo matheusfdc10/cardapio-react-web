@@ -62,7 +62,7 @@ const NewDishPage = () => {
                     </div>
                     <div className="field">
                         <label>Foto</label>
-                        <img src={viewImage} width="200x" alt="image" />
+                        {!viewImage || <img src={viewImage} width="200x" alt="image" />}
                         <input 
                             type="file"
                             accept="image/png,image/jpeg"

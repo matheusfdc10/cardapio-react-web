@@ -23,6 +23,8 @@ export const StyledUpdateDish = Styled.div`
             > .field {
                 display: flex;
                 gap: 10px;
+                padding-right: 8px;
+                
                 > textarea {
                     width: 100%;
                     border-radius: 15px;
