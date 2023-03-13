@@ -29,7 +29,7 @@ const SideBar = () => {
                 </div>
             </div>
             <div className='sidebar-container-btns'>
-                <div title='Início' className='btn' onClick={() => navigate('/home')}>
+                <div title='Início' className='btn' onClick={() => navigate('/')}>
                     <div className='icon'>
                         <ImHome />
                     </div>

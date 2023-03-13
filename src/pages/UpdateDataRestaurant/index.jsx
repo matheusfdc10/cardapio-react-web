@@ -26,7 +26,7 @@ const UpdateDataRestaurante = () => {
             setLoading(true)
             await updateDataRestaurante(name, email, telephone, whatsapp, colorHeader, colorDetails, image)
             await loadRestautant()
-            navigate('/home')
+            navigate('/')
         } catch(err) {
             console.log(err)
         }
@@ -50,76 +50,78 @@ const UpdateDataRestaurante = () => {
 
     return (
         <StyledUpdateDataRestaurante>
-            <h1>{`Atualizar dados`}</h1>
-            <hr/>
-            <div className="form">
-                <div className="field">
-                    <label>Nome</label>
-                    <Input 
-                        type="text"
-                        onChange={e => setName(e.target.value)}
-                        value={name}
-                    />
+            <div className="container">
+                <h1>{`Atualizar dados`}</h1>
+                <hr/>
+                <div className="form">
+                    <div className="field">
+                        <label>Nome</label>
+                        <Input 
+                            type="text"
+                            onChange={e => setName(e.target.value)}
+                            value={name}
+                        />
+                    </div>
+                    <div className="field">
+                        <label>Email</label>
+                        <Input 
+                            type="email"
+                            onChange={e => setEmail(e.target.value)}
+                            value={email}
+                        />
+                    </div>
+                    <div className="field">
+                        <label>Telefone</label>
+                        <Input 
+                            type="number"
+                            onChange={e => setTelephone(e.target.value)}
+                            value={telephone}
+                        />
+                    </div>
+                    <div className="field">
+                        <label>WhatsApp</label>
+                        <Input 
+                            type="number"
+                            onChange={e => setWhatsapp(e.target.value)}
+                            value={whatsapp}
+                        />
+                    </div>
+                    <div className="field">
+                        <label>Cor do cabeçalho</label>
+                        <input 
+                            type="color"
+                            onChange={e => setColorHeader(e.target.value)}
+                            value={colorHeader}
+                        />
+                    </div>
+                    <div className="field">
+                        <label>Cor dos detalhes</label>
+                        <input 
+                            type="color"
+                            onChange={e => setColorDetails(e.target.value)}
+                            value={colorDetails}
+                        />
+                    </div>
+                    <div className="field">
+                        <label>Logo</label>
+                        {!viewImage || <img src={viewImage} width="200x" alt="image" />}
+                        <input 
+                            type="file"
+                            accept="image/png,image/jpeg"
+                            onChange={e => newImage(e.target.files[0])}
+                        />
+                        {!viewImage || 
+                            <Button onClick={() => {
+                                setViewImage(null)
+                                setImage(null)
+                            }} 
+                            style={{height: "25px"}}>Excluir Logo</Button>}
+                    </div>
                 </div>
-                <div className="field">
-                    <label>Email</label>
-                    <Input 
-                        type="email"
-                        onChange={e => setEmail(e.target.value)}
-                        value={email}
-                    />
-                </div>
-                <div className="field">
-                    <label>Telefone</label>
-                    <Input 
-                        type="number"
-                        onChange={e => setTelephone(e.target.value)}
-                        value={telephone}
-                    />
-                </div>
-                <div className="field">
-                    <label>WhatsApp</label>
-                    <Input 
-                        type="number"
-                        onChange={e => setWhatsapp(e.target.value)}
-                        value={whatsapp}
-                    />
-                </div>
-                <div className="field">
-                    <label>Cor do cabeçalho</label>
-                    <input 
-                        type="color"
-                        onChange={e => setColorHeader(e.target.value)}
-                        value={colorHeader}
-                    />
-                </div>
-                <div className="field">
-                    <label>Cor dos detalhes</label>
-                    <input 
-                        type="color"
-                        onChange={e => setColorDetails(e.target.value)}
-                        value={colorDetails}
-                    />
-                </div>
-                <div className="field">
-                    <label>Logo</label>
-                    {!viewImage || <img src={viewImage} width="200x" alt="image" />}
-                    <input 
-                        type="file"
-                        accept="image/png,image/jpeg"
-                        onChange={e => newImage(e.target.files[0])}
-                    />
-                    {!viewImage || 
-                        <Button onClick={() => {
-                            setViewImage(null)
-                            setImage(null)
-                        }} 
-                        style={{height: "25px"}}>Excluir Logo</Button>}
-                </div>
-                <div className="actions">
-                    <Button onClick={() => HandleUpdateDataRestaurante()}>Atualizar</Button>
-                    <Button onClick={() => navigate('/home')}>Cancelar</Button>
-                </div>
+            </div>
+            <div className="actions">
+                <Button onClick={() => HandleUpdateDataRestaurante()}>Atualizar</Button>
+                <Button onClick={() => navigate('/')}>Cancelar</Button>
             </div>
         </StyledUpdateDataRestaurante>
     )

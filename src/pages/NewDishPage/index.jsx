@@ -19,7 +19,7 @@ const NewDishPage = () => {
     const newDishe = async () => {
         try{
             await createDish(title, description, price, image, typedish)
-            navigate('/home')
+            navigate('/')
         } catch(err) {
             console.log(err)
         }
@@ -33,45 +33,47 @@ const NewDishPage = () => {
 
     return (
         <StyledNewDishPage>
-            <h1>{`Novo Prato`}</h1>
-            <hr/>
-            <div className="form">
-                <div className="field">
-                    <label>Título</label>
-                    <Input 
-                        type="text"
-                        onChange={e => setTtitle(e.target.value)}
-                        value={title}
-                    />
+            <div className="container">
+                <h1>{`Novo Prato`}</h1>
+                <hr/>
+                <div className="form">
+                    <div className="field">
+                        <label>Título</label>
+                        <Input 
+                            type="text"
+                            onChange={e => setTtitle(e.target.value)}
+                            value={title}
+                        />
+                    </div>
+                    <div className="field">
+                        <label>Preço</label>
+                        <Input 
+                            type="number"
+                            onChange={e => setPrice(e.target.value)}
+                            value={price}
+                        />
+                    </div>
+                    <div className="field">
+                        <label>Descrição</label>
+                        <textarea
+                            onChange={e => setDescription(e.target.value)}
+                            value={description}
+                        />
+                    </div>
+                    <div className="field">
+                        <label>Foto</label>
+                        <img src={viewImage} width="200x" alt="image" />
+                        <input 
+                            type="file"
+                            accept="image/png,image/jpeg"
+                            onChange={e => newImage(e.target.files[0])}
+                        />
+                    </div>
                 </div>
-                <div className="field">
-                    <label>Preço</label>
-                    <Input 
-                        type="number"
-                        onChange={e => setPrice(e.target.value)}
-                        value={price}
-                    />
-                </div>
-                <div className="field">
-                    <label>Descrição</label>
-                    <textarea
-                        onChange={e => setDescription(e.target.value)}
-                        value={description}
-                    />
-                </div>
-                <div className="field">
-                    <label>Foto</label>
-                    <img src={viewImage} width="200x" alt="image" />
-                    <input 
-                        type="file"
-                        accept="image/png,image/jpeg"
-                        onChange={e => newImage(e.target.files[0])}
-                    />
-                </div>
-                <div className="actions">
-                    <Button onClick={() => newDishe()}>Criar</Button>
-                    <Button onClick={() => navigate('/home')}>Cancelar</Button>
-                </div>
+            </div>
+            <div className="actions">
+                <Button onClick={() => newDishe()}>Criar</Button>
+                <Button onClick={() => navigate('/')}>Cancelar</Button>
             </div>
         </StyledNewDishPage>
     )

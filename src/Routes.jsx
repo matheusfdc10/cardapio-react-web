@@ -51,7 +51,7 @@ export default function AppRoutes() {
                 </Private>
               }
             >
-              <Route path="/home" element={<HomePage />} />
+              <Route path="/" element={<HomePage />} />
               <Route path="/UpdateDataRestaurnate" element={<UpdateDataRestaurante />} />
               <Route path="/NewTypeDish" element={<NewTypeDishPage />} />
               <Route path="/UpdateTypeDish/:name/:id" element={<UpdateTypeDishPage />} />

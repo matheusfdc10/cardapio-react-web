@@ -15,14 +15,14 @@ const Header = ({ name, logo, colorHeader}) => {
       <div className="logo">
         {
           logo ?
-            <img src={logo} alt="logo" onClick={() => navigate(authenticated ? '/home' : '/menu')} />
+            <img src={logo} alt="logo" onClick={() => navigate(authenticated ? '/' : '/menu')} />
           :
-            <h1 onClick={() => navigate(authenticated ? '/home' : '/menu')}>{name}</h1>
+            <h1 onClick={() => navigate(authenticated ? '/' : '/menu')}>{name}</h1>
         }
       </div>
       {(authenticated && location.pathname === '/menu') ? (
           <div className="actions">
-            <Button onClick={() => navigate("/home")}>Início</Button>
+            <Button onClick={() => navigate("/")}>Início</Button>
             {/* <Button onClick={() => logout()}>Sair</Button> */}
           </div>
         ) : authenticated ||

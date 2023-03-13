@@ -13,5 +13,6 @@ export const StyledContainer = Styled.div`
         /* background-color: #f5f5f5; */
         width: 100%;
         /* max-width: 600px; */
+        /* display: grid; */
     }
 `

@@ -23,6 +23,8 @@ export const IndexStyled = Styled.div`
                 border-radius: 16px;
                 box-shadow: rgb(0 0 0 / 20%) 0px 0px 12px;
                 overflow-x: auto;
+
+                display: grid;
             }
         }
     }

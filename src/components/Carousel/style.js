@@ -15,6 +15,10 @@ export const StyledCarousel = Styled.div`
                 padding: 8px 12px;
                 flex-shrink: 0;
                 cursor: pointer;
+                display: flex;
+                align-items: center:
+                justify-content: center;
+                
                 :active {
                     background-color: white;
                 }
@@ -22,6 +26,7 @@ export const StyledCarousel = Styled.div`
                 > span {
                     font-weight: bold;
                     font-size: 18px;
+                    flex-shrink: 0;
                 }
 
             }

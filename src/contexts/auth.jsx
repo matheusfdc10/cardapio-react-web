@@ -45,7 +45,7 @@ export function AuthProvider({ children }) {
       const { data } = await getRestaurant()
       setRestaurant(data);
       if(location.pathname.includes("login")){
-        navigate("/home");
+        navigate("/");
       }
       setLoading(false)
     } catch (err) {

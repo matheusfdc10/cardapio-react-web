@@ -4,7 +4,7 @@ export const StyledLoading = Styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 440px;
+    height: 100%;
 
     .lds-roller {
         display: inline-block;

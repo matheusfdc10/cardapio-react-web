@@ -46,7 +46,7 @@ const UpdateTypesDishesPage = () => {
     <StyledUpdateTypesDishesPage>
         <div>
           <h1>{name}</h1>
-          <Button style={{height: '30px'}} onClick={() => navigate('/home')}>Voltar</Button>
+          <Button style={{height: '30px'}} onClick={() => navigate('/')}>Voltar</Button>
         </div>
         {/* <hr/> */}
       <table>
@@ -59,7 +59,7 @@ const UpdateTypesDishesPage = () => {
           </tr>
         </thead>
         <tbody>
-          {!dishes.length? navigate('/home') : dishes?.map((dish, i) => (
+          {!dishes.length? navigate('/') : dishes?.map((dish, i) => (
             <tr key={i}>
               <td className="conteudo">{dish.name}</td>
               <td className="conteudo">{formatCurrency(dish.price)}</td>

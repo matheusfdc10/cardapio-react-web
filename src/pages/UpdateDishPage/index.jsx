@@ -72,83 +72,85 @@ const UpdateDishPage = () => {
 
   return (
     <StyledUpdateDish>
-      <h1>{`Atualizando prato`}</h1>
-      <hr />
-      <div className="form">
-        <div className="field">
-          <label>Título</label>
-          <Input
-            type="text"
-            onChange={(e) => setTtitle(e.target.value)}
-            value={title}
-          />
-        </div>
-        <div className="field">
-          <label>Preço</label>
-          <Input
-            type="number"
-            onChange={(e) => setPrice(e.target.value)}
-            value={price}
-          />
-        </div>
-        <div className="field">
-          <label>Descrição</label>
-          <textarea
-            col="10px"
-            cols="50"
-            rows="4"
-            onChange={(e) => setDescription(e.target.value)}
-            value={description}
-          />
-        </div>
-        <div className="field">
-          <label>Foto</label>
-          {!viewImage || <img src={viewImage} width="200x" alt="image" />}
-          <input
-            type="file"
-            accept="image/png,image/jpeg"
-            onChange={(e) => newImage(e.target.files[0])}
-          />
-          {!viewImage || (
-            <Button
-              onClick={() => {
-                setViewImage(null);
-                setImage(null);
-              }}
-              style={{ height: "25px" }}
-            >
-              Excluir
-            </Button>
-          )}
-        </div>
-        <div className="field">
-          <div className="radio">
-            <input
-              type="radio"
-              name="status"
-              id="ativo"
-              value="ativo"
-              checked={status == "ativo"}
-              onChange={(e) => setStatus(e.target.value)}
+      <div className="container">
+        <h1>{`Atualizando prato`}</h1>
+        <hr />
+        <div className="form">
+          <div className="field">
+            <label>Título</label>
+            <Input
+              type="text"
+              onChange={(e) => setTtitle(e.target.value)}
+              value={title}
             />
-            <label htmlFor="ativo">Ativo</label>
           </div>
-          <div className="radio">
-            <input
-              type="radio"
-              name="status"
-              id="inativo"
-              value="inativo"
-              checked={status != "ativo"}
-              onChange={(e) => setStatus(e.target.value)}
+          <div className="field">
+            <label>Preço</label>
+            <Input
+              type="number"
+              onChange={(e) => setPrice(e.target.value)}
+              value={price}
             />
-            <label htmlFor="inativo">Inativo</label>
+          </div>
+          <div className="field">
+            <label>Descrição</label>
+            <textarea
+              col="10px"
+              cols="50"
+              rows="4"
+              onChange={(e) => setDescription(e.target.value)}
+              value={description}
+            />
+          </div>
+          <div className="field">
+            <label>Foto</label>
+            {!viewImage || <img src={viewImage} width="200x" alt="image" />}
+            <input
+              type="file"
+              accept="image/png,image/jpeg"
+              onChange={(e) => newImage(e.target.files[0])}
+            />
+            {!viewImage || (
+              <Button
+                onClick={() => {
+                  setViewImage(null);
+                  setImage(null);
+                }}
+                style={{ height: "25px" }}
+              >
+                Excluir
+              </Button>
+            )}
+          </div>
+          <div className="field">
+            <div className="radio">
+              <input
+                type="radio"
+                name="status"
+                id="ativo"
+                value="ativo"
+                checked={status == "ativo"}
+                onChange={(e) => setStatus(e.target.value)}
+              />
+              <label htmlFor="ativo">Ativo</label>
+            </div>
+            <div className="radio">
+              <input
+                type="radio"
+                name="status"
+                id="inativo"
+                value="inativo"
+                checked={status != "ativo"}
+                onChange={(e) => setStatus(e.target.value)}
+              />
+              <label htmlFor="inativo">Inativo</label>
+            </div>
           </div>
         </div>
-        <div className="actions">
-          <Button onClick={() => UpdateDish()}>Atualizar</Button>
-          <Button onClick={() => navigate(-1)}>Cancelar</Button>
-        </div>
+      </div>
+      <div className="actions">
+        <Button onClick={() => UpdateDish()}>Atualizar</Button>
+        <Button onClick={() => navigate(-1)}>Cancelar</Button>
       </div>
     </StyledUpdateDish>
   );

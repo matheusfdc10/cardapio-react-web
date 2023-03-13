@@ -15,7 +15,7 @@ const NewTypeDishPage = () => {
         try {
             await createTypeDishes( title, restaurant.id)
             // await loadRestautant()
-            navigate('/home')
+            navigate('/')
         } catch(err) {
             console.log(err)
         }
@@ -23,21 +23,23 @@ const NewTypeDishPage = () => {
 
     return (
         <StyledNewTypeDishPage>
-            <h1>Novo Tipo de Prato</h1>
-            <hr/>
-            <div className="form">
-                <div className="field">
-                    <label>Nome</label>
-                    <Input 
-                        type="text"
-                        onChange={e => setTtitle(e.target.value)}
-                        value={title}
-                    />
+            <div className="container">
+                <h1>Novo Tipo de Prato</h1>
+                <hr/>
+                <div className="form">
+                    <div className="field">
+                        <label>Nome</label>
+                        <Input 
+                            type="text"
+                            onChange={e => setTtitle(e.target.value)}
+                            value={title}
+                        />
+                    </div>
                 </div>
-                <div className="actions">
-                    <Button onClick={() => newTypeDishes()}>Criar</Button>
-                    <Button onClick={() => navigate('/home')}>Cancelar</Button>
-                </div>
+            </div>
+            <div className="actions">
+                <Button onClick={() => newTypeDishes()}>Criar</Button>
+                <Button onClick={() => navigate('/')}>Cancelar</Button>
             </div>
         </StyledNewTypeDishPage>
     )
