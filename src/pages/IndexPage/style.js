@@ -11,6 +11,8 @@ export const IndexStyled = Styled.div`
         display: flex;
         overflow: hidden;
         gap: 16px;
+        background-color: ${({theme}) => theme.background};
+        transition: .6s;
         
         .container {
             flex: 1;
@@ -23,8 +25,24 @@ export const IndexStyled = Styled.div`
                 border-radius: 16px;
                 box-shadow: rgb(0 0 0 / 20%) 0px 0px 12px;
                 overflow-x: auto;
-
+                background: ${({theme}) => theme.backgroundContainer};
+                color: ${({theme}) => theme.textColor};
+                transition: .6s;
+                
                 display: grid;
+
+
+                table, thead, tbody, tr, td, th{
+                    border-top: 1px solid ${({theme}) => theme.textColor};
+                    border-bottom: 1px solid ${({theme}) => theme.textColor};
+                }
+
+                textarea {
+                    background: ${({theme}) => theme.inputColor};
+                    color: ${({theme}) => theme.textColor};
+                    transition: .6s;
+                }
+
             }
         }
     }

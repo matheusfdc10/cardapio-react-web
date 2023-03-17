@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../contexts/auth";
 import Button from "../Button";
 
-const Header = ({ name, logo, colorHeader}) => {
+const Header = ({ name, logo, colorHeader, theme, onChangeTheme}) => {
   const { authenticated, logout } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
@@ -25,8 +25,10 @@ const Header = ({ name, logo, colorHeader}) => {
             <Button onClick={() => navigate("/")}>Início</Button>
             {/* <Button onClick={() => logout()}>Sair</Button> */}
           </div>
-        ) : authenticated ||
-          <Button onClick={() => navigate("/login")}>Entrar</Button>
+        ) : authenticated ?
+            <button className="btn-theme" onClick={onChangeTheme} >{theme === 'dark' ? '☀️' : '🌑'}</button>
+          :
+            <Button onClick={() => navigate("/login")}>Entrar</Button>
         }
     </StyledHeader>
   );

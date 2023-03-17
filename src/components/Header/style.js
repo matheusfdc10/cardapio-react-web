@@ -53,4 +53,12 @@ export const StyledHeader = Styled.header`
             display: none;
         }
     }
+
+    .btn-theme {
+        border: none;
+        background: transparent;
+        font-size: 25px;
+        padding: 0;
+        margin: 0;
+    }
 `

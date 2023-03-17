@@ -6,7 +6,7 @@ import { AuthContext } from "../../contexts/auth";
 import { deletTypeDish } from "../../services/api";
 import { StyledHome } from "./style";
 
-import { GrAddCircle } from "react-icons/gr"
+import { CgAdd } from "react-icons/cg"
 
 const HomePage = () => {
     const navigate = useNavigate()
@@ -49,7 +49,7 @@ const HomePage = () => {
           onClick={() => navigate('/NewTypeDish')} 
           fontSize='18px' height='32px'
           > 
-            <GrAddCircle />
+            <CgAdd className="icon" />
             Adicionar tipo
         </Button>
       </div>

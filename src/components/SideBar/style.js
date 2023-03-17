@@ -8,12 +8,14 @@ export const StyledSideBar = Styled.div`
     padding: 12px 16px;
     border-radius: 16px;
     box-shadow: rgb(0 0 0 / 20%) 0px 0px 12px;
+    background: ${({theme}) => theme.backgroundContainer};
+    color: ${({theme}) => theme.textColor};
+    transition: .6s;
 
     display: flex;
     flex-direction: column;
     gap: 10px;
 
-    transition: .6s;
 
     .sidebar-btn-toclose {
         display: flex;
@@ -50,10 +52,12 @@ export const StyledSideBar = Styled.div`
             box-shadow: rgb(0 0 0 / 20%) 0px 0px 8px;
             padding: 10px;
             overflow: hidden;
+            background: ${({theme}) => theme.buttonColor};
+            transition: .6s;
 
             :hover {
-                box-shadow: rgb(0 0 0 / 30%) 0px 0px 10px;
-                background-color: #cdcdcd33;
+                /* box-shadow: #424242 0px 0px 10px; */
+                background-color: #8d8d8d45;
             }
 
             .icon {
@@ -67,7 +71,6 @@ export const StyledSideBar = Styled.div`
             }
 
             > span {
-                transition: .6s;
                 font-size: 19px;
                 flex-shrink: 0;
             }

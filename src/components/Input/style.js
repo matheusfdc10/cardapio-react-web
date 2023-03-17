@@ -7,6 +7,10 @@ export const StyledInput = Styled.input`
     padding-left: 8px;
     border: none;
     box-shadow: 0 0 5px #0004;
+    background: ${({theme}) => theme.inputColor};
+    color: ${({theme}) => theme.textColor};
+    transition: .6s;
+
     :focus {
         outline: 0;
         box-shadow: 0 0 5px #0008;

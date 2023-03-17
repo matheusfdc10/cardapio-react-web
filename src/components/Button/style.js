@@ -10,9 +10,12 @@ export const StyledButton = Styled.button`
     box-shadow: 0 0 5px #0004;
     cursor: pointer;
     flex-shrink: 0;
-    
+    transition: .6s;
+    background: ${({theme}) => theme.buttonColor};
+    color: ${({theme}) => theme.textColor};
+
     :hover {
-        box-shadow: 0 0 6px #0007;
+        background-color: #8d8d8d45;
     }
     
     :active {

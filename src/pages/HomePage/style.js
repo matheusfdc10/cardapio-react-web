@@ -9,6 +9,11 @@ export const StyledHome = Styled.div`
         > h1 {
             margin-bottom: 10px;
         }
+
+        .icon {
+            transition: .6s;
+            color: ${({theme}) => theme.textColor};
+        }
     }
     
     table {
