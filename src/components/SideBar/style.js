@@ -21,6 +21,7 @@ export const StyledSideBar = Styled.div`
         display: flex;
         justify-content: end;
         align-items: center;
+        transition: .6s;
         
         .btn-toclose {
             height: 40px;
@@ -31,7 +32,6 @@ export const StyledSideBar = Styled.div`
             text-align: center;
 
             > svg {
-                transition: .6s;
                 width: 100%;
                 height: 100%;
             }

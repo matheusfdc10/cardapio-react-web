@@ -1,7 +1,7 @@
 export default {
     light: {
-        background: '#E6E6E6',
-        backgroundContainer: '#E6E6E6',
+        background: '#fdfdfd',
+        backgroundContainer: 'white',
         textColor: '#0D1117',
         buttonColor: '#f1f1f1',
         inputColor: 'white'

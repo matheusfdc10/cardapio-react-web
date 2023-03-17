@@ -6,6 +6,7 @@ export const StyledNewTypeDishPage = Styled.div`
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
+    transition: .6s;
     
     > .container {
         > h1 {

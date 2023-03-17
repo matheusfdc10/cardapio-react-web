@@ -1,6 +1,7 @@
 import Styled from "styled-components";
 
 export const StyledHome = Styled.div`
+    transition: .6s;
     > div {
         display: flex;
         justify-content: space-between;
