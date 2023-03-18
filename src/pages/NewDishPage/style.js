@@ -37,6 +37,32 @@ export const StyledNewDishPage = Styled.div`
                     }
                 }
                 /* margin: 10px; */
+
+                .file {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    padding: 5px 10px;
+                    border: none;
+                    border-radius: 15px;
+                    box-shadow: 0 0 5px #0004;
+                    cursor: pointer;
+                    flex-shrink: 0;
+                    background: ${({theme}) => theme.buttonColor};
+                    color: ${({theme}) => theme.textColor};
+                    transition: .6s;
+                    height: 25px;
+                    font-size: 13.3333px;
+                    font-family: 'Arial';
+
+                    :hover {
+                        background-color: #8d8d8d45;
+                    }
+                }
+
+                > input[type='file'] {
+                    display: none;
+                }
             }
         }
     }

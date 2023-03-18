@@ -104,12 +104,21 @@ const UpdateDishPage = () => {
           </div>
           <div className="field">
             <label>Foto</label>
-            {!viewImage || <img src={viewImage} width="200x" alt="image" />}
-            <input
-              type="file"
-              accept="image/png,image/jpeg"
-              onChange={(e) => newImage(e.target.files[0])}
-            />
+            {viewImage ? (
+              <img src={viewImage} width="200x" alt="image" />
+            ) : (
+              <>
+                <label for="file" className="file">
+                  Adicione uma imagem
+                </label>
+                <input
+                  id="file"
+                  type="file"
+                  accept="image/png,image/jpeg"
+                  onChange={(e) => newImage(e.target.files[0])}
+                />
+              </>
+            )}
             {!viewImage || (
               <Button
                 onClick={() => {
