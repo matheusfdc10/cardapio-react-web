@@ -45,6 +45,7 @@ export const StyledMenu = Styled.div`
             margin: 32px 0;
             padding: 16px;
             border-radius: 10px;
+            cursor: pointer;
 
             .description {
                 flex: 1;

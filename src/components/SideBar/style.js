@@ -21,6 +21,7 @@ export const StyledSideBar = Styled.div`
         display: flex;
         justify-content: end;
         align-items: center;
+        cursor: pointer;
         transition: .6s;
         
         .btn-toclose {
@@ -54,6 +55,7 @@ export const StyledSideBar = Styled.div`
             overflow: hidden;
             background: ${({theme}) => theme.buttonColor};
             transition: .6s;
+            cursor: pointer;
 
             :hover {
                 /* box-shadow: #424242 0px 0px 10px; */

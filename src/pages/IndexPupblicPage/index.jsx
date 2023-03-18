@@ -27,7 +27,7 @@ const IndexPupblicPage = () => {
     return (
         <>
             <Header name={restaurante.name} logo={restaurante.logo} colorHeader={restaurante.colorHeader} />
-            <Outlet teste="oi" />
+            <Outlet/>
             <Whatsapp whatsapp={restaurante.whatsapp}/>
         </>
     )

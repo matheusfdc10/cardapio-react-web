@@ -10,7 +10,7 @@ export default {
         background: '#181818',
         backgroundContainer: '#202020',
         textColor: '#E6E6E6',
-        buttonColor: '#080808',
+        buttonColor: '#111111',
         inputColor: '#2c2c2c'
     }
 }

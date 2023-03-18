@@ -26,7 +26,7 @@ const Header = ({ name, logo, colorHeader, theme, onChangeTheme}) => {
             {/* <Button onClick={() => logout()}>Sair</Button> */}
           </div>
         ) : authenticated ?
-            <button className="btn-theme" onClick={onChangeTheme} >{theme === 'dark' ? '☀️' : '🌑'}</button>
+            <button className="btn-theme" onClick={onChangeTheme} >{theme === 'dark' ? '☀️' : (theme === 'ligth' ? '🌑' : <Button onClick={() => navigate("/")}>Início</Button>)}</button>
           :
             <Button onClick={() => navigate("/login")}>Entrar</Button>
         }

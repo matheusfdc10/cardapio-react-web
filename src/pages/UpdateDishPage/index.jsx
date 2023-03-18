@@ -134,6 +134,7 @@ const UpdateDishPage = () => {
           <div className="field">
             <div className="radio">
               <input
+                className="radio"
                 type="radio"
                 name="status"
                 id="ativo"
@@ -141,10 +142,11 @@ const UpdateDishPage = () => {
                 checked={status == "ativo"}
                 onChange={(e) => setStatus(e.target.value)}
               />
-              <label htmlFor="ativo">Ativo</label>
+              <label className="radio" htmlFor="ativo">Ativo</label>
             </div>
             <div className="radio">
               <input
+                className="radio"
                 type="radio"
                 name="status"
                 id="inativo"
@@ -152,7 +154,7 @@ const UpdateDishPage = () => {
                 checked={status != "ativo"}
                 onChange={(e) => setStatus(e.target.value)}
               />
-              <label htmlFor="inativo">Inativo</label>
+              <label className="radio" htmlFor="inativo">Inativo</label>
             </div>
           </div>
         </div>

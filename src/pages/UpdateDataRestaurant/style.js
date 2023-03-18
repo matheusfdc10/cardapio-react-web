@@ -65,6 +65,12 @@ export const StyledUpdateDataRestaurante = Styled.div`
                 > input[type='file'] {
                     display: none;
                 }
+
+                > input[type='color'] {
+                    cursor: pointer;
+                    border: none;
+                    background: ${({theme}) => theme.inputColor};
+                }
             }
         }
     }

@@ -39,10 +39,11 @@ export const StyledUpdateDish = Styled.div`
                     }
                 }
 
-                > .radio {
+                .radio{
                     display: flex;
                     text-align: left;
                     gap: 5px;
+                    cursor: pointer;
                 }
                 /* margin: 10px; */
 

@@ -44,6 +44,7 @@ export const StyledDishDetails = Styled.div`
         border-radius: 50%;
         padding: 4px;
         box-shadow: 0 0 10px #0003;
+        cursor: pointer;
 
         :hover {
             background-color: #fffe;

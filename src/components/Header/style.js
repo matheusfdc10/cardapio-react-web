@@ -12,6 +12,7 @@ export const StyledHeader = Styled.header`
     /* box-shadow: 0 0 15px #0004; */
     box-shadow: 0 0 15px #000f;
     z-index: 100;
+    transition: .6s;
 
     .logo {
         display: flex;
@@ -20,10 +21,12 @@ export const StyledHeader = Styled.header`
 
         > img {
             height: 60px;
+            cursor: pointer;
         }
 
         > h1 {
             color: white;
+            cursor: pointer;
 
             @media (max-width: 500px) {
                 font-size: 26px;
@@ -60,5 +63,6 @@ export const StyledHeader = Styled.header`
         font-size: 25px;
         padding: 0;
         margin: 0;
+        cursor: pointer;
     }
 `
