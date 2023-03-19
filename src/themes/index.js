@@ -7,8 +7,10 @@ export default {
         inputColor: 'white'
     },
     dark: {
-        background: '#181818',
-        backgroundContainer: '#202020',
+        // background: '#181818',
+        background: '#18181b',
+        // backgroundContainer: '#202020',
+        backgroundContainer: '#1f1f23',
         textColor: '#E6E6E6',
         buttonColor: '#111111',
         inputColor: '#2c2c2c'

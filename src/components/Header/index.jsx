@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/auth";
 import Button from "../Button";
+import DarkModeSwitch from "../DarkModeSwitch";
 
 const Header = ({ name, logo, colorHeader, theme, onChangeTheme}) => {
   const { authenticated, logout } = useContext(AuthContext);
@@ -26,7 +27,8 @@ const Header = ({ name, logo, colorHeader, theme, onChangeTheme}) => {
             {/* <Button onClick={() => logout()}>Sair</Button> */}
           </div>
         ) : authenticated ?
-            <button className="btn-theme" onClick={onChangeTheme} >{theme === 'dark' ? '☀️' : '🌑'}</button>
+            <DarkModeSwitch theme={theme}  onChangeTheme={onChangeTheme} />
+            // <button className="btn-theme" onClick={onChangeTheme} >{theme === 'dark' ? '☀️' : '🌑'}</button>
           :
             <Button onClick={() => navigate("/login")}>Entrar</Button>
         }
